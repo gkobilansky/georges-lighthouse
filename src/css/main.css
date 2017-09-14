@@ -21,6 +21,7 @@ body {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
@@ -28,9 +29,8 @@ body {
   padding-top: 5rem;
 }
 
-svg {
-  height: 30rem;
-  width: auto;
+svg#lighthouse {
+  height: 35rem;
 }
 
 #george {
@@ -133,11 +133,27 @@ only screen and (max-width: 500px),
 /* iPads */
 
 only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+     background: url('/images/GLH_LOGO_2A.svg') center center fixed no-repeat;
+     background-size: fit;
+  }
+
+
+  
   #top,
   #bottom,
   #left,
   #right,
-  #george {
+  #george,
+  #lighthouse {
     display: none;
+  }
+
+  .right {
+    padding-top: 18rem;
+  }
+
+  .info > div {
+    width: 100%;
   }
 }

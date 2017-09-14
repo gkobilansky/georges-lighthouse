@@ -9,7 +9,7 @@ console.log("🦊 Hello! Edit me in src/js/app.js");
 // Velocity(document.getElementsByTagName("path"), { opacity: 0.5 }, { duration: 1000 });
 // Velocity(document.getElementById("george"), { transition:  }, { duration: 1000 });
 
-$('#george').velocity("transition.flipYIn");
+
 
 
 /**********************
