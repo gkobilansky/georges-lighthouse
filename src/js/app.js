@@ -1,16 +1,17 @@
 // JS Goes here - ES6 supported
 import Velocity from 'velocity-animate';
 
-// Say hello
-console.log("🦊 Hello! Edit me in src/js/app.js");
 
-// // Velocity(document.body, { opacity: 0.5 });
-// Velocity(document.getElementById("main"), { opacity: 0.5 }, { duration: 1000 });
-// Velocity(document.getElementsByTagName("path"), { opacity: 0.5 }, { duration: 1000 });
-// Velocity(document.getElementById("george"), { transition:  }, { duration: 1000 });
+var george = document.getElementById('george');
+var lighthouse = document.getElementsByClassName('lighthouse-draw');
 
 
-
+// Velocity
+/* First animation */
+Velocity(lighthouse, { strokeDashoffset: 0 }, {duration: 3000});
+Velocity(lighthouse, { fill: "#145693" }, {delay: 500, queue: false});
+Velocity(george, { translateY: -75 }, { delay: 500, duration: 1000});
+Velocity(george, { rotateZ: -5 }, { delay: 1000, duration: 2000, queue: false });
 
 /**********************
  Velocity UI Pack
