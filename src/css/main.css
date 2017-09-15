@@ -15,7 +15,13 @@ body {
   color: #145793;
   /* background: url('/images/GLH_LOGO_2A.svg') center center fixed no-repeat; */
   background-size: contain;
-  overflow-x: hidden;
+ overflow: hidden;
+}
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 
@@ -23,14 +29,22 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 10rem;
-  padding-top: 5rem;
+  /* height: 10rem;
+  padding-top: 5rem; */
 }
 
-svg#lighthouse {
-  height: 35rem;
+.info {
+}
+
+.lighthouse {
+  /* flex-grow: 2; */
+} 
+
+
+#lighthouse {
+  width:50rem;
 }
 
 #george {
@@ -39,7 +53,6 @@ svg#lighthouse {
   right: 2rem;
   display: block;
   text-align: left;
-
 }
 
 #george>svg {
@@ -93,6 +106,7 @@ h2 {
 #right {
   border: 1px solid #145793;
   position: fixed;
+  z-index: -1000;
 }
 
 #left,
@@ -125,17 +139,9 @@ h2 {
   bottom: 0;
 }
 
-@media
-/* Fairly small screens including iphones */
-
-only screen and (max-width: 500px),
-
-/* iPads */
-
-only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   body {
-     background: url('/images/GLH_LOGO_2A.svg') center center fixed no-repeat;
-     background-size: fit;
+     overflow: auto;
   }
 
 
@@ -144,17 +150,30 @@ only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   #bottom,
   #left,
   #right,
-  #george,
-  #lighthouse,
   h2 {
     display: none;
   }
 
-  .right {
-    padding-top: 18rem;
+  #george {
+    position: relative;
+    display: block;
+    bottom: 0;
+    right: 0;
+    padding-top: 5rem;
   }
 
-  .info > div {
+  #lighthouse {
+    width: 100%;
+  }
+
+  .lighthouse {
+    order: -1;
+  }
+
+  .row {
+    width: 100%;
+  }
+  .info>div {
     width: 100%;
   }
 }
