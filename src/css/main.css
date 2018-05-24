@@ -97,7 +97,7 @@ p, address {
 div.title {
   margin: 0 auto;
   position: absolute;
-  left: 50%;
+  left: 42%;
   bottom: 3rem;
 }
 
@@ -106,7 +106,6 @@ h2 {
   font-family: 'Caveat', cursive;
   text-transform: uppercase;
   position: relative;
-  left: -50%;
 }
 
 
